@@ -10,9 +10,9 @@ begin
     gem.email = 'heycarsten@gmail.com'
     gem.homepage = 'http://github.com/heycarsten/email-veracity'
     gem.authors = 'Carsten Nielsen'
-    
-    gem.add_dependency 'activemodel', '>= 3.0'
-    
+
+    gem.add_dependency 'activemodel', '>= 3.0.0'
+
     gem.add_development_dependency 'test-unit', '>= 2.1.1'
     gem.add_development_dependency 'bundler', '>= 1.0.0.rc.3'
     gem.add_development_dependency 'mocha', '>= 0.9.8'
@@ -47,7 +47,7 @@ task :test => :check_dependencies
 
 task :default => :test
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
